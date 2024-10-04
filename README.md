@@ -1,2 +1,7 @@
-# Coding-Bat-Solutions
-This repository contains the solutions of all the question on Coding Bat website.All questions of Python are solved and tested.
+# Python DSA  
+
+Solution of multiple DSA from problems different websites and books
+
+*  Coding-Bat Website
+*  Cracking the coding Interview
+*  Coding Interviews I appeared in
