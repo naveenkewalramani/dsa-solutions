@@ -9,7 +9,7 @@ type TreeNode struct {
 }
 
 func main() {
-	root := buildTree([]int{1, 2, 3, 4, 5})
+	root := buildTree([]int{1, 2, 3, 4, 5, 6, 7})
 	response := []int{}
 	response = preOrderTraversal(root, response)
 	fmt.Println(response)
