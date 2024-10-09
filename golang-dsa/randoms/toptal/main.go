@@ -2,9 +2,9 @@ package main
 
 import (
 	"fmt"
-	"randoms/toptal/orange"
-	"randoms/toptal/stack"
 	"reflect"
+	"toptal/orange"
+	"toptal/stack"
 )
 
 func main() {
