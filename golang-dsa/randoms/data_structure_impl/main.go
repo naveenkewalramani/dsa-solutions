@@ -9,6 +9,7 @@ import (
 func main() {
 	singlyLinkedList()
 	doublyLinkedList()
+	ll.ContainerOperations()
 }
 
 func singlyLinkedList() {
