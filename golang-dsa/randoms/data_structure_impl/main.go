@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 
+	generics "data_structure_impl/generics"
 	ll "data_structure_impl/linkedlist"
 	q "data_structure_impl/queue"
 	st "data_structure_impl/stack"
@@ -14,6 +15,10 @@ func main() {
 	ll.ContainerOperations()
 	stack()
 	queue()
+	fmt.Println(generics.Addition(20, 40.2, 2002))
+	fmt.Println(generics.Addition(20, 40.9))
+	fmt.Println(generics.Subtraction(20, 40))
+	fmt.Println(generics.Addition("Naveen", " Kewalramani", " is", " a", " good boy"))
 }
 
 func singlyLinkedList() {
