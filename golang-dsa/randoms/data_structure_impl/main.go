@@ -4,12 +4,16 @@ import (
 	"fmt"
 
 	ll "data_structure_impl/linkedlist"
+	q "data_structure_impl/queue"
+	st "data_structure_impl/stack"
 )
 
 func main() {
 	singlyLinkedList()
 	doublyLinkedList()
 	ll.ContainerOperations()
+	stack()
+	queue()
 }
 
 func singlyLinkedList() {
@@ -40,4 +44,28 @@ func doublyLinkedList() {
 	w.InsertNodeAtTail(6)
 	w.IterateFromHead()
 	w.IterateFromTail()
+}
+
+func stack() {
+	s := st.IStack{
+		List: []int{},
+	}
+	s.Push(10)
+	s.Push(20)
+	s.Push(30)
+	s.Push(40)
+	s.Pop()
+	fmt.Println(s.Top())
+	fmt.Println(s.IsEmpty())
+}
+
+func queue() {
+	q := q.IQueue{}
+	q.Init()
+	fmt.Println(q.IsEmpty())
+	fmt.Println(q.Dequeue())
+	q.Enqueue(10)
+	q.Enqueue(20)
+	fmt.Println(q.Dequeue())
+	fmt.Println(q.IsEmpty())
 }
