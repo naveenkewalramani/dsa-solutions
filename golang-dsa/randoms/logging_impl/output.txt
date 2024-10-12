@@ -1,0 +1,6 @@
+INFO: 2024/10/12 17:19:16 logger.go:31: This is Naveen
+WARNING: 2024/10/12 17:19:16 logger.go:35: There is something wrong here
+ERROR: 2024/10/12 17:19:16 logger.go:39: Everything is breaking
+INFO: 2024/10/12 17:20:33 logger.go:31: This is Naveen
+WARNING: 2024/10/12 17:20:33 logger.go:35: There is something wrong here
+ERROR: 2024/10/12 17:20:33 logger.go:39: Everything is breaking
