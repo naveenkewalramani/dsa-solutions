@@ -8,7 +8,8 @@ import (
 func main() {
 	buitInTypeQuestions()
 	compositeTypeQuestions()
-
+	functionRelatedInterviewQuestions()
+	fmt.Println(test([]string{"flower", "flow", "flowing", "follower"}))
 }
 
 func buitInTypeQuestions() {
@@ -62,9 +63,40 @@ func compositeTypeQuestions() {
 	bufferedCh := make(chan int, 19)
 	fmt.Println("Size of buffered channel", unsafe.Sizeof(bufferedCh))
 
-	testFunc := func(a, b int) int {
+	testFunc := func(a, b int) int { // anonymous function or function literal
 		return a + b
 	}
 	fmt.Println(testFunc(1, 1))
 	fmt.Println("Size of function", unsafe.Sizeof(testFunc))
+	// assiging function to another variable
+	m := testFunc
+	fmt.Println(m(1, 1))
 }
+
+func functionRelatedInterviewQuestions() {
+	fmt.Println(computeAnotherFunction(add, 10, 5)) // passing function as variable and passing function to another function
+	fmt.Println(computeAnotherFunction(sub, 10, 5))
+	fmt.Println(computeAnotherFunction(mul, 10, 5))
+	fmt.Println(computeAnotherFunction(div, 10, 5))
+}
+
+func add(a, b int) int {
+	return a + b
+}
+
+func sub(a, b int) int {
+	return a - b
+}
+
+func mul(a, b int) int {
+	return a * b
+}
+func div(a, b int) int {
+	return a / b
+}
+func computeAnotherFunction(a func(int, int) int, b, c int) int {
+	return a(b, c) // assigning function to variable
+}
+
+// ordering of mesurement of time
+// nanosecond -> microsecond -> millisecond -> decisecond -> centisecond -> second
