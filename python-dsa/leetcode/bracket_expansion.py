@@ -1,4 +1,5 @@
-# Stripe inteview old question
+### https://leetcode.com/discuss/interview-experience/5341224/Stripe-or-Backend-Engineer-or-Bangalore-or-Jun-2024-or-Reject/
+### Stripe interview old question
 def bracketExpansion(string):
     leftBracketReached = False
     rightBracketReached = False
