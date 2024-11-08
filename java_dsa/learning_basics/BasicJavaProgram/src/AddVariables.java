@@ -1,10 +1,10 @@
+import java.util.Scanner;
+
 public class AddVariables {
     public static void main(String []args){
-        // Variation 1 - direct variables
-        int a = 20;
-        int b = 10;
-        System.out.println(a + b);
-
-        // TODO: Variation 2 - Take input from reader
+        Scanner in = new Scanner(System.in);
+        int num1 = in.nextInt();
+        int num2 = in.nextInt();
+        System.out.println(num1 + num2);
     }
 }
