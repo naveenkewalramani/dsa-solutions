@@ -3,8 +3,8 @@ public class ParkingLot {
     int parkingLotsPerFloor;
     int[][]parkingLots;
 
-    // createParkingLot : method to create parking lot for given floors and slots
-    void createParkingLot(int floors, int parkingLotsPerFloor) {
+    // ParkingLot : method to create parking lot for given floors and slots
+    public ParkingLot (int floors, int parkingLotsPerFloor) {
         this.floors = floors;
         this.parkingLotsPerFloor = parkingLotsPerFloor;
         this.parkingLots = new int[floors][parkingLotsPerFloor];

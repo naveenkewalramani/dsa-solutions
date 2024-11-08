@@ -7,6 +7,18 @@ public class Robot {
     private int y;
     private int z;
 
+    public Robot(){
+        this.x = 0;
+        this.y = 0;
+        this.z = 0;
+    }
+
+    public Robot(int x, int y, int z){
+        this.x = x;
+        this.y = y;
+        this.z = z;
+    }
+
     void move(String direction, int distance){
         if (!validate(direction)){
             System.out.println("Invalid direction");
