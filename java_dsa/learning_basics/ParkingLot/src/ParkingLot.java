@@ -1,22 +1,26 @@
 public class ParkingLot {
-    int floors;
-    int parkingLotsPerFloor;
-    int[][]parkingLots;
+    int totalFloors;
+    Floor []floors;
 
     // ParkingLot : method to create parking lot for given floors and slots
-    public ParkingLot (int floors, int parkingLotsPerFloor) {
-        this.floors = floors;
-        this.parkingLotsPerFloor = parkingLotsPerFloor;
-        this.parkingLots = new int[floors][parkingLotsPerFloor];
+    public ParkingLot (int floors, int bikeSlots, int carSlots,int truckSlots) {
+        this.totalFloors = floors;
+        this.floors = new Floor[floors];
+        for (int i = 0;i<floors;i++) {
+            Floor floor = new Floor(i,bikeSlots,carSlots,truckSlots);
+            this.floors[i] = floor;
+        }
     }
 
     // addFloorToParkingLot : method to increase floor count
-    void addFloorToParkingLot(){
-        this.floors ++;
-        int[][] newParkingLots = new int[this.floors][this.parkingLotsPerFloor];
-        for (int i = 0; i<this.floors; i++){
-            System.arraycopy(this.parkingLots[i], 0, newParkingLots[i], 0, this.parkingLotsPerFloor);
+    void addFloorToParkingLot( int bikeSlots, int carSlots,int truckSlots){
+        this.totalFloors ++;
+        Floor []newFloors = new Floor[this.totalFloors];
+        for (int i = 0; i<this.totalFloors-1; i++){
+            newFloors[i] = this.floors[i];
         }
-        this.parkingLots = newParkingLots;
+        Floor floor = new Floor(this.totalFloors, bikeSlots,carSlots,truckSlots);
+        newFloors[this.totalFloors-1] = floor;
+        this.floors = newFloors;
     }
 }
