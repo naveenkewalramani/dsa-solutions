@@ -1,44 +1,86 @@
 public class Floor {
     int floorNumber;
-    int totalBikeSlot;
+    int[] bikeSlots;
     int occupiedBikeSlots;
-    int totalCarSlots;
+    int[] carSlots;
     int occupiedCarSlots;
-    int totalTruckSlot;
+    int[] truckSlots;
     int occupiedTruckSlots;
 
     public Floor(int floorNumber, int bikeSlot, int carSlot, int truckSlot) {
         this.floorNumber = floorNumber;
-        this.totalBikeSlot = bikeSlot;
+        this.bikeSlots = new int[bikeSlot];
         this.occupiedBikeSlots = 0;
-        this.totalCarSlots = carSlot;
+        this.carSlots = new int[carSlot];
         this.occupiedCarSlots = 0;
-        this.totalTruckSlot = truckSlot;
+        this.truckSlots = new int[truckSlot];
         this.occupiedTruckSlots = 0;
     }
 
     public int freeCarSlots() {
-        return this.totalCarSlots - this.occupiedCarSlots;
+        return this.carSlots.length - this.occupiedCarSlots;
     }
 
     public int freeBikeSlots() {
-        return this.totalBikeSlot - this.occupiedBikeSlots;
+        return this.bikeSlots.length - this.occupiedBikeSlots;
     }
 
     public int freeTruckSlots() {
-        return this.totalTruckSlot - this.occupiedTruckSlots;
+        return this.truckSlots.length - this.occupiedTruckSlots;
     }
 
-    public void occupyCarSlot() {
-        this.occupiedCarSlots++;
+    public int occupyCarSlot() {
+        int slotNumber = -1;
+        boolean slotFound = false;
+        for (int i = 0; i < this.carSlots.length; i++) {
+            if (this.carSlots[i] == 0) {
+                slotNumber = i;
+                slotFound = true;
+                break;
+            }
+        }
+        if (slotFound){
+            this.carSlots[slotNumber] = -1;
+            this.occupiedCarSlots++;
+            return slotNumber;
+        }
+        return -1;
     }
 
-    public void occupyBikeSlot() {
-        this.occupiedBikeSlots++;
+    public int occupyBikeSlot() {
+        int slotNumber = -1;
+        boolean slotFound = false;
+        for (int i = 0; i < this.bikeSlots.length; i++) {
+            if (this.bikeSlots[i] == 0) {
+                slotNumber = i;
+                slotFound = true;
+                break;
+            }
+        }
+        if (slotFound){
+            this.bikeSlots[slotNumber] = -1;
+            this.occupiedBikeSlots++;
+            return slotNumber;
+        }
+        return -1;
     }
 
-    public void occupyTruckSlot() {
-        this.occupiedTruckSlots++;
+    public int occupyTruckSlot() {
+        int slotNumber = -1;
+        boolean slotFound = false;
+        for (int i = 0; i < this.truckSlots.length; i++) {
+            if (this.truckSlots[i] == 0) {
+                slotNumber = i;
+                slotFound = true;
+                break;
+            }
+        }
+        if (slotFound){
+            this.truckSlots[slotNumber] = -1;
+            this.occupiedTruckSlots++;
+            return slotNumber;
+        }
+        return -1;
     }
 
     public void unOccupyCarSlot() {
