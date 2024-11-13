@@ -23,6 +23,8 @@ public class Main {
                 parkVehicle(scanner, parkingLot);
             } else if (Objects.equals(command, "FREE_SLOTS")) {
                 getFreeSlots(scanner, parkingLot);
+            } else if (Objects.equals(command, "SHOW_PARK_VEHICLES")) {
+                showParkVehicle(parkingLot);
             } else if (Objects.equals(command, "EXIT")) {
                 break;
             }
@@ -44,6 +46,11 @@ public class Main {
     static void parkVehicle(Scanner scanner, ParkingLot parkingLot) {
         System.out.println("Enter the vehicle type(CAR, BIKE, TRUCK), number, color");
         String vehicleType = scanner.next();
+        if (!(vehicleType.equals(Vehicle.vehicleTypeCar) || vehicleType.equals(Vehicle.vehicleTypeBike) || vehicleType.equals(Vehicle.vehicleTypeTruck))) {
+            System.out.println("Invalid vehicle type");
+            return;
+        }
+
         String color = scanner.next();
         String vehicleNumber = scanner.next();
         int floorNumber = parkingLot.getFreeFloorForVehicle(vehicleType);
@@ -54,7 +61,7 @@ public class Main {
         int slotNumber = parkingLot.occupySlotOnFloor(vehicleType, floorNumber);
         Vehicle vehicle = new Vehicle(vehicleType, color, vehicleNumber);
         Ticket ticket = new Ticket(floorNumber, slotNumber, vehicle.getRegistrationNumber());
-        System.out.printf("Ticket created, Number: %s, Floor: %d, Slot: %d\n", ticket.ticketNumber, ticket.floor, ticket.slot);
+        parkingLot.updateParkingLotTicketMapping(vehicle, ticket);
     }
 
     // getFreeSlots: method to execute free slots command
@@ -64,4 +71,7 @@ public class Main {
         parkingLot.getFreeSlotsForVehicle(vehicleType);
     }
 
+    static void showParkVehicle(ParkingLot parkingLot) {
+        parkingLot.printParkingLotTicketMapping();
+    }
 }
