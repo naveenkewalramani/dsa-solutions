@@ -1,11 +1,11 @@
 public class Floor {
-    int floorNumber;
-    int[] bikeSlots;
-    int occupiedBikeSlots;
-    int[] carSlots;
-    int occupiedCarSlots;
-    int[] truckSlots;
-    int occupiedTruckSlots;
+    private int floorNumber;
+    private  int[] bikeSlots;
+    private int occupiedBikeSlots;
+    private int[] carSlots;
+    private int occupiedCarSlots;
+    private int[] truckSlots;
+    private int occupiedTruckSlots;
 
     public Floor(int floorNumber, int bikeSlot, int carSlot, int truckSlot) {
         this.floorNumber = floorNumber;

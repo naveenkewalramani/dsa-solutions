@@ -5,7 +5,7 @@ import java.util.Objects;
 public class ParkingLot {
     private int totalFloors;
     private Floor[] floors;
-    Map<String, Ticket> ticketMap;
+    private Map<String, Ticket> ticketMap;
 
     // ParkingLot : method to create parking lot for given floors and slots
     public ParkingLot(int floors, int bikeSlots, int carSlots, int truckSlots) {

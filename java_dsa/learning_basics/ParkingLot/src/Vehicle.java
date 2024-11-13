@@ -1,8 +1,7 @@
 public class Vehicle {
-    String type;
-    String registrationNumber;
-    String color;
-    Ticket ticket;
+    private String type;
+    private String registrationNumber;
+    private String color;
 
     public final static String vehicleTypeCar = "CAR";
     public final static String vehicleTypeBike = "BIKE";
@@ -16,5 +15,13 @@ public class Vehicle {
 
     public String getRegistrationNumber() {
         return this.registrationNumber;
+    }
+
+    public String getColor() {
+        return this.color;
+    }
+
+    public String getType() {
+        return this.type;
     }
 }
