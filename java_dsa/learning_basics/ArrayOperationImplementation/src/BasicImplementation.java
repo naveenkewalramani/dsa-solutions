@@ -1,3 +1,4 @@
+import java.util.Arrays;
 
 public class BasicImplementation {
     public static void main(String[] args) {
@@ -13,5 +14,13 @@ public class BasicImplementation {
         for (int i = 0; i < arr3.length; i++){
             System.out.println(arr3[i]);
         }
+
+        int[] values = new int[10];
+        System.out.println(values.length);
+        System.out.println(Arrays.toString(values));
+        for (int i =0 ; i < 10;i++){
+            values[i] = i;
+        }
+        System.out.println(Arrays.toString(values));
     }
 }
