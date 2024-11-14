@@ -83,15 +83,33 @@ public class Floor {
         return -1;
     }
 
-    public void unOccupyCarSlot() {
+    public void unOccupyCarSlot(int slotNumber) {
+        this.carSlots[slotNumber] = 0;
         this.occupiedCarSlots--;
     }
 
-    public void unOccupyBikeSlot() {
+    public void unOccupyBikeSlot(int slotNumber) {
+        this.bikeSlots[slotNumber] = 0;
         this.occupiedBikeSlots--;
     }
 
-    public void unOccupyTruckSlot() {
+    public void unOccupyTruckSlot(int slotNumber) {
+        this.truckSlots[slotNumber] = 0;
         this.occupiedTruckSlots--;
+    }
+
+    public void addParkingSlot(String slotType){
+       if (slotType.equals(Vehicle.vehicleTypeCar)){
+            this.carSlots = copyArray(this.carSlots);
+       }else if (slotType.equals(Vehicle.vehicleTypeBike)){
+           this.bikeSlots = copyArray(this.bikeSlots);
+       }else if (slotType.equals(Vehicle.vehicleTypeTruck)){
+           this.truckSlots = copyArray(this.truckSlots);
+       }
+    }
+    private int[] copyArray(int[] array){
+        int[] newArray = new int[array.length+1];
+        System.arraycopy(array, 0, newArray, 0, array.length);
+        return newArray;
     }
 }

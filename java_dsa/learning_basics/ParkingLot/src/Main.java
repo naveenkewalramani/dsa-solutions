@@ -25,6 +25,10 @@ public class Main {
                 getFreeSlots(scanner, parkingLot);
             } else if (Objects.equals(command, "SHOW_PARK_VEHICLES")) {
                 showParkVehicle(parkingLot);
+            } else if (Objects.equals(command, "ADD_SLOT")) {
+                addSlotOnFloor(scanner, parkingLot);
+            } else if (Objects.equals(command, "UNPARK_VEHICLE")) {
+                unparkVehicle(scanner, parkingLot);
             } else if (Objects.equals(command, "EXIT")) {
                 break;
             }
@@ -58,9 +62,9 @@ public class Main {
             System.out.println("No free slot");
             return;
         }
-        int slotNumber = parkingLot.occupySlotOnFloor(vehicleType, floorNumber);
+        int slotNumber = parkingLot.occupySlotInParkingLot(vehicleType, floorNumber);
         Vehicle vehicle = new Vehicle(vehicleType, color, vehicleNumber);
-        Ticket ticket = new Ticket(floorNumber, slotNumber, vehicle.getRegistrationNumber());
+        Ticket ticket = new Ticket(floorNumber, slotNumber, vehicle.getRegistrationNumber(), vehicleType);
         parkingLot.updateParkingLotTicketMapping(vehicle, ticket);
     }
 
@@ -73,5 +77,24 @@ public class Main {
 
     static void showParkVehicle(ParkingLot parkingLot) {
         parkingLot.printParkingLotTicketMapping();
+    }
+
+    static void addSlotOnFloor(Scanner scanner, ParkingLot parkingLot) {
+        System.out.println("Enter the floor number and new slot type(CAR, BIKE, TRUCK)");
+        int floorNumber = scanner.nextInt();
+        String vehicleType = scanner.next();
+        parkingLot.addSlotOnFloor(floorNumber, vehicleType);
+    }
+
+    static void unparkVehicle(Scanner scanner, ParkingLot parkingLot) {
+        System.out.println("Enter the vehicle number");
+        String vehicleNumber = scanner.next();
+        if (!parkingLot.checkIfVehicleParked(vehicleNumber)) {
+            System.out.println("Vehicle is not parked");
+            return;
+        }
+        parkingLot.unOccupySlotInParkingLot(vehicleNumber);
+        System.out.println("Vehicle Unoccupied");
+
     }
 }

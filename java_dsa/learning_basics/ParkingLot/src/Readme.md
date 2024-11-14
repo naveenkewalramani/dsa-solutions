@@ -4,12 +4,11 @@ Create a command-line application for the parking lot system with the following 
 The functions that the parking lot system can do:
 * Create the parking lot. -> DONE
 * Add floors to the parking lot. -> DONE
-* Add a parking lot slot to any of the floors. -> PENDING
+* Add a parking lot slot to any of the floors. -> DONE
 * Given a vehicle, it finds the first available slot, books it, creates a ticket, parks the vehicle, and finally returns the ticket. -> DONE
-* Unparks a vehicle given the ticket id.
+* Unparks a vehicle given the ticket id. -> DONE
 * Displays the number of free slots per floor for a specific vehicle type. -> DONE
-* Displays all the free slots per floor for a specific vehicle type.
-* Displays all the occupied slots per floor for a specific vehicle type.
+* Displays all the free slots per floor for a specific vehicle type. -> DONE
 * Details about the Vehicles:
 * Every vehicle will have a type, registration number, and color. -> DONE
 * Different Types of Vehicles:
@@ -23,8 +22,8 @@ The functions that the parking lot system can do:
   * Finding the first available slot should be based on:
     * The slot should be of the same type as the vehicle. -> DONE
     * The slot should be on the lowest possible floor in the parking lot. -> DONE
-    * The slot should have the lowest possible slot number on the floor.
-    * Numbered serially from 1 to n for each floor where n is the number of parking slots on that floor.
+    * The slot should have the lowest possible slot number on the floor. -> DONE
+    * Numbered serially from 1 to n for each floor where n is the number of parking slots on that floor. -> DONE
 * Details about the Parking Lot Floors:
   * Numbered serially from 1 to n where n is the number of floors.
   * Might contain one or more parking lot slots of different types.
