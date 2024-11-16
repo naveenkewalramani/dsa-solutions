@@ -1,12 +1,24 @@
-# Golang DSA  
+# Machine Coding Interview Questions
 
+| Topic                | Language |
+|:---------------------|:--------:|
+| Build a Rate Limiter |  Python  |
+| Build a TODO App     |  Golang  |
+| Build a ParkingLot   |   Java   |
+| Build URL Shortner   |  Golang  |
+
+
+
+## Interview Preparation & DSA
+
+### Golang DSA
 Solution of multiple DSA problems from different websites and books in golang
 
 *  Cracking the coding Interview
-*  Coding Interviews I appeared in 
+*  Coding Interviews I appeared in
 *  LeetCode
 
-# Python DSA  
+### Python DSA
 
 Solution of multiple DSA problems from different websites and books in python
 
@@ -16,6 +28,6 @@ Solution of multiple DSA problems from different websites and books in python
 *  LeetCode
 
 
-# Java DSA
+### Java DSA
 
 Solution of multiple DSA problems from different websites and books in java
