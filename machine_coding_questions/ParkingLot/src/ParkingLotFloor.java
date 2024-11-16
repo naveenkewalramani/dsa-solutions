@@ -1,4 +1,6 @@
-public class Floor {
+import constants.VehicleTypes;
+
+public class ParkingLotFloor {
     private int floorNumber;
     private  int[] bikeSlots;
     private int occupiedBikeSlots;
@@ -7,7 +9,7 @@ public class Floor {
     private int[] truckSlots;
     private int occupiedTruckSlots;
 
-    public Floor(int floorNumber, int bikeSlot, int carSlot, int truckSlot) {
+    public ParkingLotFloor(int floorNumber, int bikeSlot, int carSlot, int truckSlot) {
         this.floorNumber = floorNumber;
         this.bikeSlots = new int[bikeSlot];
         this.occupiedBikeSlots = 0;
@@ -99,11 +101,11 @@ public class Floor {
     }
 
     public void addParkingSlot(String slotType){
-       if (slotType.equals(Vehicle.vehicleTypeCar)){
+       if (slotType.equals(VehicleTypes.vehicleTypeCar)){
             this.carSlots = copyArray(this.carSlots);
-       }else if (slotType.equals(Vehicle.vehicleTypeBike)){
+       }else if (slotType.equals(VehicleTypes.vehicleTypeBike)){
            this.bikeSlots = copyArray(this.bikeSlots);
-       }else if (slotType.equals(Vehicle.vehicleTypeTruck)){
+       }else if (slotType.equals(VehicleTypes.vehicleTypeTruck)){
            this.truckSlots = copyArray(this.truckSlots);
        }
     }

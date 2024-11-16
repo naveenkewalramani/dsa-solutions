@@ -1,11 +1,11 @@
-public class Ticket {
+public class ParkingLotTicket {
     private int floor;
     private int slot;
     private String ticketNumber;
     private String vehicleNumber;
     private String vehicleType;
 
-    public Ticket(int floor, int slot, String vehicleNumber, String vehicleType) {
+    public ParkingLotTicket(int floor, int slot, String vehicleNumber, String vehicleType) {
         this.floor = floor;
         this.slot = slot;
         this.vehicleNumber = vehicleNumber;
