@@ -1,3 +1,5 @@
+package AccountsExample;
+
 public class DepositsAccount extends Account {
     float balance;
 

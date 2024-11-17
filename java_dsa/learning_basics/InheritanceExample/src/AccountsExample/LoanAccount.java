@@ -1,3 +1,5 @@
+package AccountsExample;
+
 public class LoanAccount extends Account {
     float disbursedAmount;
     float repaymentAmount;

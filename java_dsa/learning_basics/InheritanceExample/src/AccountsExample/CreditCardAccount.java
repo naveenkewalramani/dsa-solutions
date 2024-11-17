@@ -1,3 +1,5 @@
+package AccountsExample;
+
 public class CreditCardAccount  extends Account {
     float offeredLimit;
     float utilizedLimit;
