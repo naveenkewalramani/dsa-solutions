@@ -6,7 +6,7 @@
     * If token is achieved, the API request shall proceed.
     * If token is not achieved, the API request shall not proceed.
     * Bucket will be refill at constant refill rate with desired number of token
-  * Timer Wheel
+  * SlidingWindow
 * Callback
   * OnAccept()
   * OnReject

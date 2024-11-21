@@ -5,6 +5,7 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         System.out.println("Choose the rate limiter scheme number");
         System.out.print("1. Token Bucket\n");
+        System.out.print("2. Leaky Bucket\n");
         int scheme = sc.nextInt();
         RateLimiter rl = null;
         if (scheme == 1) {
@@ -12,6 +13,11 @@ public class Main {
             int refillRate = sc.nextInt();
             int refillToken = sc.nextInt();
             rl = new TokenBucket(refillRate, refillToken);
+        }else if (scheme == 2) {
+            System.out.println("Enter the capacity and leak rate");
+            int capacity = sc.nextInt();
+            int leakRate = sc.nextInt();
+            rl = new LeakyBucket(capacity, leakRate);
         }
         while(true) {
             System.out.println("Enter the API request timestamp");
