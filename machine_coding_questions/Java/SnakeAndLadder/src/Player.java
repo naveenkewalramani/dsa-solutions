@@ -15,7 +15,19 @@ public class Player {
         displayPosition(diceValue);
     }
 
+    public int getCurrentPosition() {
+        return this.currentPosition;
+    }
+
+    public int getPreviousPosition() {
+        return this.previousPosition;
+    }
+
     public void displayPosition(int diceValue) {
-        System.out.printf("%s rolled a %d and moved from %d to %d", this.name, diceValue, this.previousPosition, this.currentPosition);
+        System.out.printf("%s rolled a %d and moved from %d to %d\n", this.name, diceValue, this.previousPosition, this.currentPosition);
+    }
+
+    public boolean checkWinner() {
+        return getCurrentPosition() == 100;
     }
 }

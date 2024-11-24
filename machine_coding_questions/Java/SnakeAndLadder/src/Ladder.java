@@ -2,11 +2,16 @@ public class Ladder {
     private int start;
     private int end;
 
-    public int getStart(){
+    Ladder(int start, int end) {
+        this.start = start;
+        this.end = end;
+    }
+
+    public int getStart() {
         return this.start;
     }
 
-    public int getEnd(){
+    public int getEnd() {
         return this.end;
     }
 }

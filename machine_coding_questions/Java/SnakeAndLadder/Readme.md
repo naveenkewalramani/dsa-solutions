@@ -24,8 +24,7 @@ Create a snake and ladder application. The application should take as input (fro
 * The board also contains some snakes and ladders.
 * Each snake will have its head at some number and its tail at a smaller number.
 * Whenever a piece ends up at a position with the head of the snake, the piece should go down to the position of the
-  tail
-  of that snake.
+  tail of that snake.
 * Each ladder will have its start position at some number and end position at a larger number.
 * Whenever a piece ends up at a position with the start of the ladder, the piece should go up to the position of the end
   of that ladder.
