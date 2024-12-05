@@ -45,7 +45,7 @@ func changingValuesOfSlicesRelatedQuestion() {
 	fmt.Println("Value c ", c, len(c), cap(c))
 	// changeValue(m) -> Return error because we cannot pass [2]int to []int
 	// fmt.Println("Value m ", m, len(m), cap(m))
-	// slice go to heap as the size is not determined, while array go to stack as the size is defined
+	// slice go to heap as the size is not determined, while array go to stackImpl as the size is defined
 	// slice has 3 elements -> pointer, len, cap
 }
 

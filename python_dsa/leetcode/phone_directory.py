@@ -12,7 +12,7 @@ class PhoneDirectory:
             self.queue.append(i)
 
     def get(self) -> int:
-        # print(self.queue, self.phoneDirectory)
+        # print(self.queueImpl, self.phoneDirectory)
         if len(self.queue) == 0:
             return -1
         item = self.queue.popleft()
@@ -30,11 +30,11 @@ class PhoneDirectory:
             self.phoneDirectory[number] = -1
             # insertIndex = -1
             self.queue.appendleft(number)
-            # for iter in range(0, len(self.queue)):
-            #     if self.queue[iter] >= number:
+            # for iter in range(0, len(self.queueImpl)):
+            #     if self.queueImpl[iter] >= number:
             #         insertIndex = iter
             #         break
-            # self.queue.insert(insertIndex, number)
+            # self.queueImpl.insert(insertIndex, number)
         
 
 

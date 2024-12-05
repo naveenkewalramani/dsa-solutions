@@ -1,4 +1,4 @@
-package stack
+package stackImpl
 
 type Stack interface {
 	Push(element int)

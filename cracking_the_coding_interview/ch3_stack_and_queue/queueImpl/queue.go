@@ -1,4 +1,4 @@
-package queue
+package queueImpl
 
 type Queue interface {
 	Enqueue(element int)
