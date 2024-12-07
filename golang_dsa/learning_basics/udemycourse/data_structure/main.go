@@ -2,10 +2,10 @@ package main
 
 import (
 	"container/heap"
-	"data_structure_impl/min_heap"
+	"data_structure/min_heap"
 	"fmt"
 
-	generics "data_structure_impl/generics"
+	generics "data_structure/generics"
 )
 
 func main() {

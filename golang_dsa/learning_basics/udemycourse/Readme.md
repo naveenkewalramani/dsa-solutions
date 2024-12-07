@@ -1,4 +1,4 @@
-# Golang - This repo contains code snipets of go code including practice class code and execrcise question.
+## Golang - This repo contains code snippets of go code including practice class code and exercise question.
 # ninja1 - Exercise for Variables values and types 
 # ninja2 - Exercise for programming fundamentals
 # ninja3 - Exercise for control flow

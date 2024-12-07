@@ -1,12 +1,5 @@
 package stackImpl
 
-type Stack interface {
-	Push(element int)
-	Pop() int
-	Top() int
-	IsEmpty() bool
-}
-
 type IStack struct {
 	List []int
 }
