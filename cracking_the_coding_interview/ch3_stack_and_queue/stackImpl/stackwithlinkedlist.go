@@ -1,4 +1,4 @@
-package stackImpl
+package main
 
 type ListNode struct {
 	Val  int

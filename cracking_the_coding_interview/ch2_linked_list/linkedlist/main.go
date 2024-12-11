@@ -1,19 +1,18 @@
 package main
 
 import (
-	ll "ch2_linked_list/linkedlist"
 	"fmt"
 )
 
 func main() {
 	singlyLinkedList()
 	doublyLinkedList()
-	ll.ContainerOperations()
+	ContainerOperations()
 }
 
 func singlyLinkedList() {
-	w := ll.SinglyLinkedListImpl{}
-	w.LinkNodeSinglyLinkedList([]*ll.SinglyLinkedListNode{
+	w := SinglyLinkedListImpl{}
+	w.LinkNodeSinglyLinkedList([]*SinglyLinkedListNode{
 		w.CreateNodeSinglyLinkedList(10),
 		w.CreateNodeSinglyLinkedList(20),
 		w.CreateNodeSinglyLinkedList(30),
@@ -26,11 +25,11 @@ func singlyLinkedList() {
 	w.InsertValueAtPosition(60, 5)
 	w.DeleteElementAtPosition(5)
 	w.DeleteElementAtPosition(3)
-	fmt.Println(ll.TraverseLinkedListRecur(w.Head, []int{}))
+	fmt.Println(TraverseLinkedListRecur(w.Head, []int{}))
 }
 
 func doublyLinkedList() {
-	w := ll.IDoublyLinkedList{}
+	w := IDoublyLinkedList{}
 	w.InsertNodeAtHead(3)
 	w.InsertNodeAtHead(2)
 	w.InsertNodeAtHead(1)

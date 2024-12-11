@@ -1,8 +1,8 @@
 package main
 
 type Stack interface {
-	Push(element int)
-	Pop() int
-	Top() int
+	Push(element string)
+	Pop() string
+	Top() string
 	IsEmpty() bool
 }

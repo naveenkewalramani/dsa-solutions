@@ -1,4 +1,4 @@
-package linkedlist
+package main
 
 type SinglyLinkedListNode struct {
 	Val  int
